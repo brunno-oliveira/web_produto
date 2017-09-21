@@ -1,2 +1,3 @@
 # web_produto
-Sistema em php para cadastro simples com 3 tabelas
+Sistema de PDV simples com 4 tabelas, controle de sessão.
+Banco MySQL, boostrap e envio de e-mail pelo SNS da AWS
