@@ -1,9 +1,10 @@
+<?php include '../lock.php'; ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
-		<title>Ativide Avalitiva</title>
+		<title>Web Produto - Cadastro de Produto </title>
   </head>
   <body class="container-fluid">
   	<?php
@@ -12,7 +13,7 @@
 	?>
 
 <form name="cadastro" action="cadastrado.php" method="post">
-  <h2>Cadastro de Contato</h2>
+  <h2>Cadastro de Produto</h2>
   <p>
     <label for="nome">Nome do produto: </label><br>
     <input type="text" name="nome" required>

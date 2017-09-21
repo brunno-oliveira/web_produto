@@ -1,3 +1,4 @@
+<?php include '../lock.php'; ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
@@ -34,8 +35,7 @@
 			echo "</TABLE>";
       } else {
         echo '<h3 class="alert alert-warning">
-              Nenhum cadastro feito. Use form abaixo para cadastrar </h3>';
-        include 'produto/form_cadastro.php';
+              Nenhum cadastro feito.</h3>';        
       }							
    ?>
   </body>

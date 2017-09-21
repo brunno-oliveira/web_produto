@@ -1,9 +1,10 @@
+<?php include '../lock.php'; ?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
-    <title>Trabalho Nuvem</title>
+    <title>Web Produto - Gerenciar Clientes</title>
   </head>
   <body class="container-fluid" >
     <?php

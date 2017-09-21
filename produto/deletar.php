@@ -1,6 +1,6 @@
 <?php		
 	if(isset($_GET['id'])){
-		include 'conn.php';    
+		include '../conn.php';    
 		$id = $_GET['id'];
 		$sql = "DELETE FROM produto WHERE ID = $id";		
 		mysqli_query($conn,$sql);

@@ -1,3 +1,4 @@
+<?php include '../lock.php'; ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>

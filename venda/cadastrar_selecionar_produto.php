@@ -1,3 +1,4 @@
+<?php include '../lock.php'; ?>
 <?php if (!isset($_GET['clienteId'])){
 	header('location:gerenciar.php');
 } ?>

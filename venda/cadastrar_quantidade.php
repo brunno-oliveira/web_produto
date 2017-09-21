@@ -1,3 +1,4 @@
+<?php include '../lock.php'; ?>
 <?php 
 	if(!isset($_GET['prodId']) || !isset($_GET['clienteId'])){
 		header('location:exibir.php');
@@ -46,7 +47,7 @@
       }	
 		
 		
-$sql = "SELECT ID, NOME, MARCA, VALOR FROM produto WHERE id = '$prodId'";
+		$sql = "SELECT ID, NOME, MARCA, VALOR FROM produto WHERE id = '$prodId'";
 		$result = mysqli_query($conn,$sql);
 		$linhas = mysqli_affected_rows($conn);
 		if ($linhas > 0){
@@ -63,8 +64,8 @@ $sql = "SELECT ID, NOME, MARCA, VALOR FROM produto WHERE id = '$prodId'";
 				$linha_atual = mysqli_fetch_assoc($result);
 				echo "<tr>";
 				foreach ($linha_atual as $indice => $valor){				
-					if($indice == "ID"){
-						$id = $valor;
+					if($indice == "VALOR"){
+						$valorProd = $valor;
 					}
 					echo "<td>" . $valor . "</td>";
 				}								
@@ -83,12 +84,18 @@ $sql = "SELECT ID, NOME, MARCA, VALOR FROM produto WHERE id = '$prodId'";
 			<label for="qtde">Quantidade: </label><br>
 			<input type="text" name="qtde" required>
 		</p>
+		
+		<input type="hidden" name="valor" 
+		value="<?php echo $valorProd?>">		
 
 		<input type="hidden" name="prodId" 
 		value="<?php echo $prodId?>">
 		
-		<input type="hidden" name="clienteId" 
+		<input type="hidden" name="clienteId" 		
 		value="<?php echo $clienteId?>">	
+		
+		<input type="hidden" name="usuarioId" 
+		value="<?php echo $_SESSION['id']?>">	
 		
 		<button type="submit" name="cadastrar" class="btn btn-success">Cadastrar!</button>		
 	</form>	
